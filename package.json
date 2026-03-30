@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint public/*.js"
+    "lint": "npm run format && npx eslint --fix .",
+    "lint:fix": "npx eslint --fix .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "repository": {
     "type": "git",
@@ -23,6 +26,11 @@
     "@eslint/eslintrc": "^3.3.5",
     "@eslint/js": "^10.0.1",
     "eslint": "^10.1.0",
-    "globals": "^17.4.0"
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "globals": "^17.4.0",
+    "prettier": "^3.8.1",
+    "prettier-plugin-css-order": "^2.2.0",
+    "prettier-plugin-tailwindcss": "^0.7.2"
   }
 }

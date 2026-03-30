@@ -1,1 +1,1 @@
-console.log("UMD Coffee website loaded.")
+console.log('UMD Coffee website loaded.');
