@@ -1,0 +1,44 @@
+# CI Workflow
+# Runs ESLint on every push and pull request to catch code issues early.
+
+name: CI
+
+# The run name appears in the GitHub Actions dashboard.
+# github.actor = the GitHub username who triggered the run.
+# github.ref_name = the branch name (e.g. "main" or "feature/navbar").
+run-name: "Lint check on '${{ github.ref_name }}' — triggered by @${{ github.actor }}"
+
+on:
+  push:
+    branches:
+      - "**"           # Run on every branch when code is pushed
+  pull_request:
+    branches:
+      - main           # Run when a PR is opened or updated targeting main
+
+jobs:
+  lint:
+    name: "ESLint — ${{ github.ref_name }}"
+
+    # The type of virtual machine to run this job on.
+    runs-on: ubuntu-latest
+
+    steps:
+      # Without checking out the code, the VM has no access to the repo's files.
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Sets up the Node.js version the project needs.
+      # Using v20 (current LTS — long-term support, meaning it's stable).
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"   # Caches node_modules between runs
+
+      - name: Clean install dependencies # based on package-lock.json
+        run: npm ci
+
+      # Checks JavaScript files for errors and style issues.
+      - name: Run ESLint
+        run: npm run lint
