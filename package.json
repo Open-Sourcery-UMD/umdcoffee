@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/Open-Sourcery-UMD/umdcoffee#readme",
   "devDependencies": {
-    "eslint": "^10.1.0"
+    "@eslint/eslintrc": "^3.3.5",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.1.0",
+    "globals": "^17.4.0"
   }
 }

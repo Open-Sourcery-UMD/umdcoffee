@@ -18,7 +18,7 @@ on:
 
 jobs:
   lint:
-    name: "ESLint — ${{ github.ref_name }}"
+    name: "ESLint"
 
     # The type of virtual machine to run this job on.
     runs-on: ubuntu-latest
@@ -29,7 +29,6 @@ jobs:
         uses: actions/checkout@v4
 
       # Sets up the Node.js version the project needs.
-      # Using v20 (current LTS — long-term support, meaning it's stable).
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
