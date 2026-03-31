@@ -4,10 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Club</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="prefetch" href="./layout.html" as="fetch" />
+    <link rel="modulepreload" href="./layout.js" />
   </head>
+
   <body>
-    <h1>Hello Coffee @ UMD 😀</h1>
-    <script src="main.js"></script>
+    <site-header
+      links='[{"label":"Demo","href":"{{BASE}}demo/"},{"label":"Contact","href":"#contact"}]'
+    ></site-header>
+    <!-- START of main content -->
+    <main class="layout">
+      <!-- testing -->
+    </main>
+    <!-- END of main content -->
+    <site-footer id="contact"></site-footer>
+    <script type="module" src="./layout.js"></script>
   </body>
 </html>

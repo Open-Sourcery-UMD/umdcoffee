@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Club</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="prefetch" href="../layout.html" as="fetch" />
+    <link rel="modulepreload" href="../layout.js" />
+  </head>
+
+  <body>
+    <site-header
+      links='[{"label":"Home","href":"{{BASE}}"},{"label":"Contact","href":"#contact"}]'
+    ></site-header>
+
+    <main class="layout">
+      <section id="hero-section" style="padding-top: 2rem">
+        <h1>Hello Coffee <span style="color: var(--color-accent)">@ UMD 😀</span></h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc euismod, nisl eget ultricies
+          tincidunt, nunc nisl aliquam nunc, vitae aliquam nisl nunc vel nisl.
+        </p>
+      </section>
+      <section id="demo-section">
+        <h1>Lorem Ipsum H1</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae
+          vestibulum vestibulum. Cras venenatis euismod malesuada.
+        </p>
+
+        <h2>Lorem Ipsum H2</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non laoreet odio. Fusce
+          lobortis porttitor purus,
+          <a href="#">ut aliquam nibh facilisis at</a>.
+        </p>
+
+        <h3>Lorem Ipsum H3</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua.
+        </p>
+
+        <h4>Lorem Ipsum H4</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua.
+        </p>
+
+        <h5>Lorem Ipsum H5</h5>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis
+          nostrud exercitation ullamco laboris.
+        </p>
+
+        <h6>Lorem Ipsum H6</h6>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore.
+        </p>
+      </section>
+    </main>
+
+    <site-footer id="contact"></site-footer>
+    <script type="module" src="../layout.js"></script>
+  </body>
+</html>
