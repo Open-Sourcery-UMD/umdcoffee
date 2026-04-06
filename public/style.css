@@ -120,6 +120,42 @@ nav a {
 }
 
 /***************************************************************
+[ALL] Cards
+***************************************************************/
+.card {
+  width: 340px;
+  border: 2px black solid;
+  border-radius: 12px;
+}
+
+.card-content {
+  padding: 18px;
+  padding-bottom: 10px;
+}
+
+.card-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-content-hero-action {
+  display: block;
+  width: 100%;
+  border: none;
+  background: cyan;
+  padding: 12px 30px;
+}
+/*
+.card-content-hero-action {
+  background: cyan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 30px;
+}
+*/
+/***************************************************************
 [<768px] Layout: Mobile-First Design ===========================
 ***************************************************************/
 .layout {
