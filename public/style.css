@@ -158,3 +158,42 @@ footer {
     background-color: var(--color-background);
   }
 }
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.subtitle {
+  font-weight: bold;
+  color: var(--color-secondary);
+}
+
+.highlight {
+  color: var(--color-accent);
+}
+
+.description {
+  max-width: 500px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--color-secondary);
+  color: var(--color-secondary-foreground);
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.hero-image {
+  max-width: 45%;
+}
