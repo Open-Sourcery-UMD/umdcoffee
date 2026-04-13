@@ -119,6 +119,90 @@ nav a {
   margin-left: 1rem;
 }
 
+.navbar {
+  display: flex; 
+  position: fixed; 
+  top: 0; 
+  width: calc(100% - 72px); 
+  justify-content: space-between; 
+  align-items: center; 
+  background-color: oklch(93.455% 0.0272 72.74); 
+  padding-left: 36px; 
+  padding-right: 36px; 
+  padding-top: 8px; 
+  padding-bottom: 8px; 
+  box-shadow: 0 4px 4px 0 #66483E40;
+}
+
+.nav-logo {
+  display: flex; 
+  gap: 16px; 
+  align-items: center;
+}
+
+.logo-link {
+  line-height: 0;
+}
+
+.logo-text {
+  color: oklch(23.433% 0.01913 40.841); 
+  font-family: 'Inter'; 
+  font-weight: bold; 
+  font-size: 19.2px; 
+  margin: 0px;
+}
+
+.nav-links {
+  display: flex; 
+  gap: 25px; 
+  align-items: center; 
+  float: left; 
+  font-family: 'Inter'; 
+  font-weight: bold; 
+  font-size: 19.2px;
+}
+
+.nav-page {
+  display: flex; 
+  gap: 40px;
+}
+
+.nav-page a {
+  color: oklch(23.433% 0.01913 40.841); 
+  text-decoration: none; 
+  margin: 0;
+}
+
+.nav-page a:hover {
+  color: oklch(52.935% 0.07398 51.292); 
+  text-decoration: none; 
+  margin: 0;
+}
+
+.nav-action a {
+  background-color: #66483E; 
+  padding-left: 30px; 
+  padding-right: 30px; 
+  padding-top: 13px; 
+  padding-bottom: 13px; 
+  border-radius: 35.14px; 
+  color: oklch(93.455% 0.0272 72.74); 
+  text-decoration: none; 
+  margin: 0;
+}
+
+.nav-action a:hover {
+  background-color: oklch(52.935% 0.07398 51.292); 
+  padding-left: 30px; 
+  padding-right: 30px; 
+  padding-top: 13px; 
+  padding-bottom: 13px; 
+  border-radius: 35.14px; 
+  color: oklch(93.455% 0.0272 72.74); 
+  text-decoration: none; 
+  margin: 0;
+}
+
 /***************************************************************
 [<768px] Layout: Mobile-First Design ===========================
 ***************************************************************/
