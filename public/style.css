@@ -3,7 +3,7 @@ Base CSS =======================================================
 ***************************************************************/
 :root {
   /* [Var] Color Palette (Brown-White-Coral) [--color-*] */
-  --color-background: oklch(93.455% 0.0272 72.74);
+  --color-background: #F5E7D6;
   --color-foreground: oklch(23.433% 0.01913 40.841);
   --color-accent: oklch(73.229% 0.15551 25.739);
   --color-primary: oklch(52.935% 0.07398 51.292);
