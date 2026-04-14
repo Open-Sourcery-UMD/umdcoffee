@@ -29,7 +29,7 @@ Base CSS =======================================================
 body {
   margin: 0;
   background-color: var(--color-background);
-  min-width: 352px; 
+  min-width: 352px;
   scrollbar-color: var(--color-primary) var(--color-background);
   scrollbar-width: thin;
   color: var(--color-foreground);
@@ -152,6 +152,7 @@ footer {
 [>=768px] Layout: Tablet Design ================================
 ***************************************************************/
 @media all and (width >=768px) {
+
   /* breakpoint for if shift of layout is needed */
   body {
     /* Example: change background color for tablet (delete later) */
@@ -196,4 +197,17 @@ footer {
 
 .hero-image {
   max-width: 45%;
+}
+
+.hero-image {
+  max-width: 45%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-image img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 50%;
 }
