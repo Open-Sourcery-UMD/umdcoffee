@@ -166,6 +166,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
+  overflow: hidden;
 }
 
 .hero-text {
@@ -196,13 +197,9 @@ footer {
 }
 
 .hero-image {
-  max-width: 45%;
-}
-
-.hero-image {
-  max-width: 45%;
   display: flex;
   justify-content: flex-end;
+  flex-shrink: 0;
 }
 
 .hero-image img {
@@ -210,4 +207,6 @@ footer {
   height: 640px;
   object-fit: cover;
   border-radius: 50%;
+  margin-right: -100px;
+  margin-top: -124px;
 }
