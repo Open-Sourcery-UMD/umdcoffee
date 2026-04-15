@@ -124,8 +124,9 @@ nav a {
 ***************************************************************/
 .card {
   width: 340px;
-  border: 2px black solid;
+  border: 2px var(--color-secondary) solid;
   border-radius: 12px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .card-content {
@@ -164,22 +165,51 @@ nav a {
 }
 
 .card-content-header-label {
-  padding: 6px 30px;
-  background: red;
+  padding: 5px 26px;
+  background: var(--color-accent);
   border-radius: 12px;
+}
+
+.card-content-header-label p {
+  color: var(--color-background);
+  font-weight: bold;
+}
+
+.card-content-header-date {
+  color: var(--color-accent);
+  font-weight: bold;
 }
 
 .card-content-hero-action {
   display: block;
   width: 100%;
   border: none;
-  background: cyan;
+  background: #66483E;
+  border-radius: 12px;
   padding: 12px 30px;
+}
+
+.card-content-hero-action p {
+  margin: 0;
+  color: var(--color-background);
+  font-weight: 600;
+}
+
+.card-content-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .card-content-body h3 {
   font-size: var(--text-xl);
+  color: var(--color-accent);
 }
+
+.card-content-body p {
+  color: var(--color-foreground);
+}
+
 /*
 .card-content-hero-action {
   background: cyan;
