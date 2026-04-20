@@ -210,15 +210,32 @@ nav a {
   color: var(--color-foreground);
 }
 
-/*
-.card-content-hero-action {
-  background: cyan;
+/***************************************************************
+[HOME] Events Section
+***************************************************************/
+.events-sec {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 30px;
+  flex-direction: column;
+  gap: 1.5rem;
 }
-*/
+
+.events-sec-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.events-sec-text p, .events-sec-text h2 {
+  margin: 0;
+}
+
+.events-sec-cards {
+  display: flex;
+  gap: 4.375rem;
+  flex-wrap: wrap;
+}
+
+
 /***************************************************************
 [<768px] Layout: Mobile-First Design ===========================
 ***************************************************************/
