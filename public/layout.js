@@ -148,3 +148,32 @@ class SiteFooter extends HTMLElement {
 customElements.define("site-header", SiteHeader);
 customElements.define("site-footer", SiteFooter);
 console.log('UMD Coffee website loaded.');
+
+// Partner Scrolling Logic
+const track = document.querySelector('.partner-scrolling-partners');
+let position = 0;
+let animationId;
+let isVisible = false;
+
+function scroll() {
+  position -= 0.5;
+
+  const imgWidth = track.children[0].offsetWidth + (10 * parseFloat(getComputedStyle(document.documentElement).fontSize));
+  if (Math.abs(position) >= imgWidth) {
+    position += imgWidth;
+    track.appendChild(track.children[0]);
+  }
+
+  track.style.transform = `translateX(${position}px)`;
+  animationId = requestAnimationFrame(scroll);
+}
+
+const observer = new IntersectionObserver(([entry]) => {
+  if (entry.isIntersecting) {
+    animationId = requestAnimationFrame(scroll);
+  } else {
+    cancelAnimationFrame(animationId);
+  }
+}, { threshold: 0 });
+
+observer.observe(document.querySelector('.partner-scrolling'));
