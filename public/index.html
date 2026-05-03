@@ -14,9 +14,6 @@
   <site-header links='[{"label":"Demo","href":"{{BASE}}demo/"},{"label":"Contact","href":"#contact"}]'></site-header>
   <!-- START of main content -->
   <main class="layout">
-    <!-- testing -->
-
-    <!-- Feature: Buttons -->
 
     <!-- Feature: Header -->
     <section class="hero">
@@ -35,11 +32,87 @@
     </section>
 
     <!-- Feature: Cards -->
+    <section class="faq">
+      <h2 class="faq-title"><span style="text-decoration: underline;">Common Questions</span> Answered</h2>
+      <p class="faq-subtitle">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+
+      <div class="faq-tabs">
+        <div class="faq-tab">
+          <span class="tab-icon">☕</span>
+          <span>Coffee Secrets</span>
+        </div>
+        <div class="faq-tab">
+          <span class="tab-icon">✉️</span>
+          <span>Contact Us</span>
+        </div>
+        <div class="faq-tab">
+          <span class="tab-icon">👥</span>
+          <span>Joining the Club</span>
+        </div>
+        <div class="faq-tab">
+          <span class="tab-icon">📖</span>
+          <span>Coffee Blogs</span>
+        </div>
+        <div class="faq-tab">
+          <span class="tab-icon">📅</span>
+          <span>Hosting Events</span>
+        </div>
+      </div>
+
+      <div class="faq-cards">
+        <div class="faq-card">
+          <span class="faq-plus" onclick="toggleFaq(this)">+</span>
+          <h3 class="faq-question">What does your club do?</h3>
+          <div class="faq-answer">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem
+              placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.</p>
+          </div>
+        </div>
+        <div class="faq-card">
+          <span class="faq-plus" onclick="toggleFaq(this)">+</span>
+          <h3 class="faq-question">How do I get started?</h3>
+          <div class="faq-answer">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem
+              placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.</p>
+          </div>
+        </div>
+        <div class="faq-card">
+          <span class="faq-plus" onclick="toggleFaq(this)">+</span>
+          <h3 class="faq-question">How often do you meet?</h3>
+          <div class="faq-answer">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem
+              placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.</p>
+          </div>
+        </div>
+        <div class="faq-card">
+          <span class="faq-plus" onclick="toggleFaq(this)">+</span>
+          <h3 class="faq-question">How do I collab with this club?</h3>
+          <div class="faq-answer">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem
+              placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
   <!-- END of main content -->
   <site-footer id="contact"></site-footer>
   <script type="module" src="./layout.js"></script>
+  <script>
+    function toggleFaq(plusBtn) {
+      const card = plusBtn.parentElement;
+      const isOpen = card.classList.contains('open');
+      // Close all cards first
+      document.querySelectorAll('.faq-card').forEach(function (c) {
+        c.classList.remove('open');
+      });
+      // If it wasn't open, open it
+      if (!isOpen) {
+        card.classList.add('open');
+      }
+    }
+  </script>
 </body>
 
 </html>
