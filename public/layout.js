@@ -153,7 +153,6 @@ console.log('UMD Coffee website loaded.');
 const track = document.querySelector('.partner-scrolling-partners');
 let position = 0;
 let animationId;
-let isVisible = false;
 
 function scroll() {
   position -= 0.5;
