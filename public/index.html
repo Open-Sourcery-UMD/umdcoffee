@@ -104,3 +104,206 @@
 </body>
 
 </html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Club</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="prefetch" href="./layout.html" as="fetch" />
+    <link rel="modulepreload" href="./layout.js" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- START of main content -->
+    <main class="layout">
+      <!-- testing -->
+
+      <!-- Feature: Buttons -->
+
+      <!-- Feature: Header -->
+      <div class = "navbar">
+        <input type="checkbox" id="hamburger">
+
+        <div class = "nav-logo">
+          <a href="/" class = "logo-link">
+            <img src="assets/icons/logo.svg" alt="Coffee Logo"/>
+          </a>
+          <p class = "logo-text">
+            Coffee<span style = "color: oklch(73.229% 0.15551 25.739);"> @ UMD </span>
+          </p>
+        </div>
+        
+        <label for="hamburger" class="hamburger-bars">
+          <svg viewBox="0 0 100 80" width="40" height="40">
+            <rect width="100" height="20" rx="10" fill="oklch(23.433% 0.01913 40.841)"></rect>
+            <rect y="30" width="100" height="20" rx="10" fill="oklch(23.433% 0.01913 40.841)"></rect>
+            <rect y="60" width="100" height="20" rx="10" fill="oklch(23.433% 0.01913 40.841)"></rect>
+          </svg>
+        </label>
+
+        <div class = "divider"></div>
+
+        <nav class = "nav-links">
+          <div class = "nav-page">
+            <a href="" class="current-page">Home</a>
+            <a href="">About</a>
+            <a href="">Resources</a>
+            <a href="">Community</a>
+          </div>
+          <div class = "nav-action">
+            <a href = "">Join</a>
+          </div>
+        </nav>
+      </div>
+
+      <!-- START of events section -->
+      <section class="events-sec">
+        <div class="events-sec-text">
+          <p>EVENTS</p>
+          <h2>Join us in our weekly events!</h2>
+        </div>
+        <div class="events-sec-cards">
+          <!-- Event 1 -->
+          <div class="card">
+            <div class="card-image">
+              <img src="card-image-placeholder.png" alt="Barista pouring coffee into a cup">
+              <div class="card-image-border"></div>
+            </div>
+            <div class="card-content">
+              <div class="card-content-header">
+                <div class="card-content-header-label">
+                  <p>Lorem</p>
+                </div>
+                <p class="card-content-header-date">July 31, 2025</p>
+              </div>
+              <div class="card-content-body">
+                <h3>Lorem Ipsum</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
+              </div>
+              <button class="card-content-hero-action"><p>Get Involved</p></button>
+              </div>
+          </div>
+          <!-- Event 2 -->
+          <div class="card">
+            <div class="card-image">
+              <img src="card-image-placeholder.png" alt="Barista pouring coffee into a cup">
+              <div class="card-image-border"></div>
+            </div>
+            <div class="card-content">
+              <div class="card-content-header">
+                <div class="card-content-header-label">
+                  <p>Lorem</p>
+                </div>
+                <p class="card-content-header-date">July 31, 2025</p>
+              </div>
+              <div class="card-content-body">
+                <h3>Lorem Ipsum</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
+              </div>
+              <button class="card-content-hero-action"><p>Get Involved</p></button>
+              </div>
+          </div>
+          <!-- Event 3 -->
+          <div class="card">
+            <div class="card-image">
+              <img src="card-image-placeholder.png" alt="Barista pouring coffee into a cup">
+              <div class="card-image-border"></div>
+            </div>
+            <div class="card-content">
+              <div class="card-content-header">
+                <div class="card-content-header-label">
+                  <p>Lorem</p>
+                </div>
+                <p class="card-content-header-date">July 31, 2025</p>
+              </div>
+              <div class="card-content-body">
+                <h3>Lorem Ipsum</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
+              </div>
+              <button class="card-content-hero-action"><p>Get Involved</p></button>
+              </div>
+          </div>
+        </div>
+      </section>
+      <!-- END of events section -->
+
+
+      <!-- Feature: Cards -->
+      <!--<div class="card">
+        <div class="card-image">
+          <img src="card-image-placeholder.png" alt="Barista pouring coffee into a cup">
+          <div class="card-image-border"></div>
+        </div>
+        <div class="card-content">
+          <div class="card-content-header">
+            <div class="card-content-header-label">
+              <p>Lorem</p>
+            </div>
+            <p class="card-content-header-date">July 31, 2025</p>
+          </div>
+          <div class="card-content-body">
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
+          </div>
+          <button class="card-content-hero-action"><p>Get Involved</p></button>
+          </div>
+        </div>-->
+
+
+    </main>
+    <!-- END of main content -->
+
+    <!-- Feature: Footer -->
+    <div class = "footer-section">
+      <div class = "footer-content">
+        <div class = "footer-logo">
+          <img src="assets/icons/logo.svg" alt="Coffee Logo"/>
+          <p class = "logo-text">
+            Coffee<span style = "color: oklch(73.229% 0.15551 25.739);"> @ University of Maryland </span>
+          </p>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.
+        </p>
+        <div class = "icon-list">
+          <a href="https://github.com/Open-Sourcery-UMD/umdcoffee" class = "icon">
+            <img src="assets/icons/github-icon.svg" alt="Coffee @ UMD Website Github"/>
+          </a>
+          <a href="https://www.instagram.com/umdcoffee/" class = "icon">
+            <img src="assets/icons/instagram-icon.svg" alt="Coffee @ UMD Instagram"/>
+          </a>
+          <a href="/" class = "icon">
+            <img src="assets/icons/discord-icon.svg" alt="Coffee @ UMD Discord"/>
+          </a>
+          <a href="/" class = "icon">
+            <img src="assets/icons/linkedin-icon.svg" alt="Coffee @ UMD LinkedIn"/>
+          </a>
+          <a href="https://terplink.umd.edu/organization/coffee" class = "icon">
+            <img src="assets/icons/terplink-icon.svg" alt="Coffee @ UMD TerpLink"/>
+          </a>
+        </div>
+      </div>
+      <div class = "links">
+        <h1>Lorem ipsum</h1>
+        <p>Lorem ipsum</p>
+        <p>Lorem ipsum</p>
+        <p>Lorem ipsum</p>
+      </div>
+      <div class = "links">
+        <h1>Lorem ipsum</h1>
+        <p>Lorem ipsum</p>
+        <p>Lorem ipsum</p>
+        <p>Lorem ipsum</p>
+        <p>Lorem ipsum</p>
+      </div>
+      <div class = "links">
+        <h1>Lorem ipsum</h1>
+        <p>Lorem ipsum</p>
+        <p>Lorem ipsum</p>
+      </div>
+    </div>
+  </body>
+</html>
