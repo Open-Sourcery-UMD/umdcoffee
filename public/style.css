@@ -119,6 +119,232 @@ nav a {
   margin-left: 1rem;
 }
 
+.navbar {
+  display: flex; 
+  flex-wrap: wrap;
+  position: fixed; 
+  top: 0; 
+  width: calc(100% - 72px); 
+  justify-content: space-between; 
+  align-items: center; 
+  background-color: oklch(93.455% 0.0272 72.74); 
+  padding-left: 36px; 
+  padding-right: 36px; 
+  padding-top: 8px; 
+  padding-bottom: 8px; 
+  box-shadow: 0 4px 4px 0 #66483E40;
+}
+
+.nav-logo {
+  display: flex; 
+  gap: 16px; 
+  align-items: center;
+}
+
+.logo-link {
+  line-height: 0;
+}
+
+.logo-text {
+  color: oklch(23.433% 0.01913 40.841); 
+  font-family: 'Inter'; 
+  font-weight: bold; 
+  font-size: 19.2px; 
+  margin: 0px;
+}
+
+.nav-links {
+  display: flex; 
+  gap: 25px; 
+  align-items: center; 
+  float: left; 
+  font-family: 'Inter'; 
+  font-weight: bold; 
+  font-size: 19.2px;
+}
+
+.nav-page {
+  display: flex; 
+  gap: 40px;
+}
+
+.nav-page a {
+  color: oklch(23.433% 0.01913 40.841); 
+  text-decoration: none; 
+  margin: 0;
+  text-align: center;
+}
+
+.nav-page a:hover {
+  color: oklch(52.935% 0.07398 51.292); 
+  text-decoration: none; 
+  margin: 0;
+}
+
+.nav-page .current-page {
+  color: oklch(73.229% 0.15551 25.739);;
+}
+
+.nav-action a {
+  background-color: #66483E; 
+  padding-left: 30px; 
+  padding-right: 30px; 
+  padding-top: 13px; 
+  padding-bottom: 13px; 
+  border-radius: 35.14px; 
+  color: oklch(93.455% 0.0272 72.74); 
+  text-decoration: none; 
+  margin: 0;
+}
+
+.nav-action a:hover {
+  background-color: oklch(52.935% 0.07398 51.292); 
+  padding-left: 30px; 
+  padding-right: 30px; 
+  padding-top: 13px; 
+  padding-bottom: 13px; 
+  border-radius: 35.14px; 
+  color: oklch(93.455% 0.0272 72.74); 
+  text-decoration: none; 
+  margin: 0;
+}
+
+.divider {
+  display: none;
+}
+
+#hamburger, .hamburger-bars {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .hamburger-bars {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  #hamburger:checked ~ .navbar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #hamburger:checked ~ .nav-links {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    margin-left: -36px;
+    margin-right: -36px;
+    margin-bottom: -6px;
+    padding-left: 36px;
+    padding-right: 36px;
+    background-color: oklch(90.733% 0.0313 75.159);
+  }
+
+  #hamburger:checked ~ .nav-links > .nav-page {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+    gap: 20px;
+  }
+
+  #hamburger:checked ~ .divider {
+    display: flex;
+    padding-top: 8px;
+    border-bottom: 2px solid #66483E40;
+    width: 100vw;
+    margin: 0 -30px;
+  }
+
+  #hamburger:checked ~ .hamburger-bars svg rect {
+    fill: oklch(52.935% 0.07398 51.292);
+  }
+
+  .navpage a:active {
+    color: oklch(52.935% 0.07398 51.292); 
+  }
+}
+
+/* Footer */
+
+.footer-section {
+  display: flex;
+  gap: 36px;
+  padding: 36px;
+  border-top: 1px solid oklch(23.433% 0.01913 40.841);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: calc(60vw - 72px);
+}
+
+.footer-content p {
+  font-family: 'Inter'; 
+  font-size: 13.3px;
+  margin: 0;
+  width: 75%;
+}
+
+.footer-logo {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.icon-list {
+  display: flex;
+  flex: 1;
+  gap: 16px;
+}
+
+.icon-list .icon {
+  width: 24px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 16px;
+}
+
+.links h1 {
+  font-size: 13.3px;
+  margin: 0;
+  color: oklch(52.935% 0.07398 51.292);
+}
+
+.links p {
+  margin: 0;
+  font-size: 13.3px;
+}
+
+@media (max-width: 768px) {
+
+  .footer-section {
+    flex-wrap: wrap;
+  }
+
+  .footer-content {
+    flex-basis: 100%;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-content p {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 /***************************************************************
 [ALL] Cards
 ***************************************************************/
@@ -245,7 +471,7 @@ nav a {
   margin: 3rem auto 0;
   min-width: 320px;
   max-width: 1280px;
-  min-height: calc(100vh - 5.5rem);
+  min-height: calc(100vh - 12rem);
 }
 
 section {
