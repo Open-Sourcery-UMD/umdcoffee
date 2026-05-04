@@ -346,6 +346,123 @@ nav a {
 }
 
 /***************************************************************
+[ALL] Cards
+***************************************************************/
+.card {
+  width: 21.25rem;
+  border: 2px var(--color-secondary) solid;
+  border-radius: 12px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.75rem 1.125rem;
+}
+
+.card-image {
+  position: relative;
+}
+
+.card-image img {
+  border-radius: 12px 12px 0 0;
+}
+
+.card-image-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1.25rem;
+  background: linear-gradient(to top, var(--color-background), rgba(0, 0, 0, 0));
+}
+
+.card-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--text-sm);
+}
+
+.card-content-header p, .card-content-body p {
+  margin: 0;
+}
+
+.card-content-header-label {
+  padding: 0.3rem 1.625rem;
+  background: var(--color-accent);
+  border-radius: 12px;
+}
+
+.card-content-header-label p {
+  color: var(--color-background);
+  font-weight: bold;
+}
+
+.card-content-header-date {
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+.card-content-hero-action {
+  display: block;
+  width: 100%;
+  border: none;
+  background: #66483E;
+  border-radius: 12px;
+  padding: 0.75rem 1.875rem;
+}
+
+.card-content-hero-action p {
+  margin: 0;
+  color: var(--color-background);
+  font-weight: 600;
+}
+
+.card-content-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card-content-body h3 {
+  font-size: var(--text-xl);
+  color: var(--color-accent);
+}
+
+.card-content-body p {
+  color: var(--color-foreground);
+}
+
+/***************************************************************
+[HOME] Events Section
+***************************************************************/
+.events-sec {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.events-sec-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.events-sec-text p, .events-sec-text h2 {
+  margin: 0;
+}
+
+.events-sec-cards {
+  display: flex;
+  gap: 4.375rem;
+  flex-wrap: wrap;
+}
+
+
+/***************************************************************
 [<768px] Layout: Mobile-First Design ===========================
 ***************************************************************/
 .layout {
