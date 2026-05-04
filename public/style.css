@@ -158,3 +158,147 @@ footer {
     background-color: var(--color-background);
   }
 }
+
+/***************************************************************
+Button Stuff
+***************************************************************/
+.button {
+  width: fit-content;
+  padding: 12px 24px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .3s ease;
+}
+
+.rounded-button {
+  border-radius: 50px;
+  background-color: var(--color-secondary);
+}
+
+
+.rectangle-button {
+  border-radius: 5px;
+  background-color: var(--color-secondary);
+}
+
+/***************************************************************
+Coffee Story Section - Scoped Styles
+***************************************************************/
+
+/* Top section*/
+section.Our-story-top-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.story-content {
+  border-left: 12px solid #62452f;
+  padding-left: 15px;
+}
+
+.image-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.image-column img {
+  width: 100%;
+  height: 200px;     
+  object-fit: cover; 
+  border-radius: 12px;
+}
+
+/* Bottom section */
+section.story-bottom-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 0px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.story-large-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Text Block */
+.story-content-main {
+  border-left: 6px solid #62452f;
+  padding-left: 15px;
+  margin-bottom: 60px; 
+}
+
+.story-content-main p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin-bottom: 40px; 
+}
+
+.stat-item {
+  text-align: center; 
+  color: #3b2a22; 
+}
+
+.stat-item .number {
+  display: block;
+  font-size: 3rem; 
+  font-weight: 700;
+  line-height: 1.1; 
+  margin-bottom: 5px;
+}
+
+.stat-item .description {
+  display: block; 
+  font-size: 1.1rem;
+}
+
+.story-bottom-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.avatar-stack {
+  display: flex;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-background); 
+  margin-left: -10px;
+}
+
+.avatar:first-child {
+  margin-left: 0;
+}
+
+.watch-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
