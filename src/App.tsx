@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Events from './components/Events';
 
 export default function App() {
   return (
@@ -7,6 +8,7 @@ export default function App() {
       <main className="layout">
         <Navbar />
         <Hero />
+        <Events />
       </main>
     </>
   );

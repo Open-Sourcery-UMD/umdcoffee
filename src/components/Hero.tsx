@@ -9,10 +9,9 @@ export default function Hero() {
           Coffee of <span className="highlight">Dreams</span>
         </h1>
         <p className="description">
-          Want unlimited, free specialty coffee (and sometimes Matcha lattes and other goodies) every
-          week? Want to kick back, relax or study, make new friends, and learn how to make coffee?
-          Join{' '}
-          <strong>Coffee @ UMD</strong> - UMD coolest club!
+          Want unlimited, free specialty coffee (and sometimes Matcha lattes and other goodies)
+          every week? Want to kick back, relax or study, make new friends, and learn how to make
+          coffee? Join <strong>Coffee @ UMD</strong> - UMD coolest club!
         </p>
         <a href="#" className="cta-button">
           Get Involved
