@@ -4,81 +4,59 @@ We're one of the largest social clubs on campus, and we want a frontend website 
 
 ## Development
 
-This is a static site served from the `public/` directory.
-
-- Install Live Server: [ext:ritwickdey.LiveServer](vscode:extension/ritwickdey.LiveServer)
-- VS Code Live Server root is configured as `/public` in `.vscode/settings.json`.
-- Vercel output directory is set to `public` in `vercel.json`.
-
-Quick local server (without extensions):
+This is a Vite + React + TypeScript app.
 
 ```bash
-cd public
-python3 -m http.server 5500
+npm install
+npm run dev
 ```
 
-Then open `http://localhost:5500`.
+Then open the URL Vite prints (default `http://localhost:5173`).
+
+Other scripts:
+
+- `npm run build` — type-checks with `tsc` and builds to `dist/`
+- `npm run preview` — serves the production build locally
+- `npm run lint` — formats with Prettier, then runs ESLint with `--fix`
+- `npm run format:check` — checks formatting without writing
+
+Vercel output directory is set to `dist` in `vercel.json`.
 
 ## Where Assets Should Go
 
-Place all static assets inside `public/assets/` so paths are predictable and easy to maintain.
+Static assets live in `public/` and are served from the site root. Reference
+them with root-absolute paths.
 
-- Images: `public/assets/images/` (photos, event banners, hero images)
-- Icons: currently inline SVG in `public/layout.html` (use `public/assets/icons/` if you switch to file-based icons)
-- Fonts: `public/assets/fonts/` (self-hosted webfonts)
+- Icons: `public/assets/icons/`
+- Images: `public/assets/images/`
+- Fonts: `public/assets/fonts/`
 
-Example usage in HTML:
+Example usage in JSX:
 
-```html
-<img src="assets/images/fall-social-banner.jpg" alt="Fall Social Event Banner" />
-```
-
-## Shared Layout System
-
-Header and footer are reusable web components loaded from shared templates.
-
-- `public/layout.html`: template source for `site-header` and `site-footer`
-- `public/layout.js`: loads templates, computes base paths, and renders components
-
-Use the header with required links:
-
-```html
-<site-header
-	links='[{"label":"Demo","href":"{{BASE}}demo/"},{"label":"Contact","href":"#contact"}]'
-></site-header>
-```
-
-Notes:
-
-- `links` must be valid JSON.
-- `{{BASE}}` in each `href` is replaced at runtime so links work from nested pages.
-- If `links` is missing or invalid, the component logs a warning and renders no nav links.
-
-Footer usage:
-
-```html
-<site-footer id="contact"></site-footer>
+```tsx
+<img src="/assets/images/fall-social-banner.jpg" alt="Fall Social Event Banner" />
 ```
 
 ## Project File Structure
 
 ```text
 umdcoffee/
-├── public/                         # Static site files served to the browser
-│   ├── index.html                  # Home page
-│   ├── demo/                       # TODELETE
-│   │   └── index.html              # Demo page for h1, h2, h3, h4, h5, p, a
+├── index.html                      # Vite entry shell
+├── public/                         # Static assets, served from /
+│   ├── assets/icons/               # Logo and social icons
+│   ├── card-image-placeholder.png
+│   └── partner.svg
+├── src/
+│   ├── main.tsx                    # createRoot entry; imports style.css
+│   ├── App.tsx                     # Composes the page sections
 │   ├── style.css                   # Global styles, variables, typography, layout
-│   ├── layout.html                 # Shared header/footer templates
-│   ├── layout.js                   # Shared layout component runtime
-│   └── assets/                     # Static media and design assets
-│       ├── images/                 # Photos and banners
-│       ├── icons/                  # Optional: file-based icons/logos (currently using inline SVG)
-│       └── fonts/                  # Self-hosted fonts
-├── .vscode/
-│   └── settings.json               # Workspace settings (Live Server root, etc.)
+│   ├── vite-env.d.ts
+│   └── components/                 # One file per component
+├── vite.config.ts                  # Vite + React plugin config
+├── tsconfig.json                   # TypeScript config for src/
+├── tsconfig.node.json              # TypeScript config for vite.config.ts
 ├── package.json                    # Project metadata and npm scripts/dependencies
-├── package-lock.json               # Exact dependency lockfile for reproducible installs
+├── package-lock.json               # Exact dependency lockfile
 ├── eslint.config.mjs               # ESLint configuration
 ├── vercel.json                     # Vercel deployment configuration
 ├── LICENSE                         # License terms for this repository
