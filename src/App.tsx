@@ -2,6 +2,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Events from './components/Events';
 import Faq from './components/Faq';
+import PartnerScroller from './components/PartnerScroller';
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
         <Hero />
         <Events />
         <Faq />
+        <PartnerScroller />
       </main>
     </>
   );
