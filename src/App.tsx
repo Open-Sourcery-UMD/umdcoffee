@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Events from './components/Events';
+import Faq from './components/Faq';
 
 export default function App() {
   return (
@@ -9,6 +10,7 @@ export default function App() {
         <Navbar />
         <Hero />
         <Events />
+        <Faq />
       </main>
     </>
   );
