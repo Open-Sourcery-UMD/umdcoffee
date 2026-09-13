@@ -60,5 +60,6 @@ umdcoffee/
 ├── eslint.config.mjs               # ESLint configuration
 ├── vercel.json                     # Vercel deployment configuration
 ├── LICENSE                         # License terms for this repository
-└── README.md                       # Project overview, setup notes, and structure reference
+├── README.md                       # Project overview, setup notes, and structure reference
+└── docs/                           # Local notes and plans (gitignored)
 ```
