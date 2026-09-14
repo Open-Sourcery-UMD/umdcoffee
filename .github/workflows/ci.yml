@@ -41,3 +41,7 @@ jobs:
       # Checks JavaScript files for errors and style issues.
       - name: Run ESLint
         run: npm run lint
+
+      # vite build runs tsc first, so this type-checks the project as a side effect.
+      - name: Build
+        run: npm run build
