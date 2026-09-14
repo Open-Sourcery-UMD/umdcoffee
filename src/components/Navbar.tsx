@@ -1,12 +1,14 @@
+import { Link, NavLink } from 'react-router-dom';
+
 export default function Navbar() {
   return (
     <div className="navbar">
       <input type="checkbox" id="hamburger" />
 
       <div className="nav-logo">
-        <a href="/" className="logo-link">
+        <Link to="/" className="logo-link">
           <img src="/assets/icons/logo.svg" alt="Coffee Logo" />
-        </a>
+        </Link>
         <p className="logo-text">
           Coffee<span style={{ color: 'oklch(73.229% 0.15551 25.739)' }}> @ UMD </span>
         </p>
@@ -24,9 +26,9 @@ export default function Navbar() {
 
       <nav className="nav-links">
         <div className="nav-page">
-          <a href="" className="current-page">
+          <NavLink to="/" className={({ isActive }) => (isActive ? 'current-page' : '')}>
             Home
-          </a>
+          </NavLink>
           <a href="">About</a>
           <a href="">Resources</a>
           <a href="">Community</a>
