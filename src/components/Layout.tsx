@@ -5,8 +5,8 @@ import Footer from './Footer';
 export default function Layout() {
   return (
     <>
+      <Navbar />
       <main className="layout">
-        <Navbar />
         <Outlet />
       </main>
       <Footer />

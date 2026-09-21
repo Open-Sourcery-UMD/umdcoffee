@@ -122,9 +122,10 @@ nav a {
 .navbar {
   display: flex; 
   flex-wrap: wrap;
-  position: fixed; 
-  top: 0; 
-  width: calc(100% - 72px); 
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: calc(100% - 72px);
   justify-content: space-between; 
   align-items: center; 
   background-color: oklch(93.455% 0.0272 72.74); 
@@ -258,7 +259,7 @@ nav a {
     padding-top: 8px;
     border-bottom: 2px solid #66483E40;
     width: 100vw;
-    margin: 0 -30px;
+    margin: 0 -36px;
   }
 
   #hamburger:checked ~ .hamburger-bars svg rect {
@@ -349,7 +350,9 @@ nav a {
 [ALL] Cards
 ***************************************************************/
 .card {
+  box-sizing: border-box;
   width: 21.25rem;
+  max-width: 100%;
   border: 2px var(--color-secondary) solid;
   border-radius: 12px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -367,6 +370,7 @@ nav a {
 }
 
 .card-image img {
+  width: 100%;
   border-radius: 12px 12px 0 0;
 }
 
@@ -505,7 +509,7 @@ nav a {
 .layout {
   display: flex;
   flex-direction: column;
-  margin: 3rem auto 0;
+  margin: 0 auto;
   min-width: 320px;
   max-width: 1280px;
   min-height: calc(100vh - 12rem);
@@ -592,6 +596,7 @@ footer {
 
 .faq-tabs {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
   margin: 2rem 0;
@@ -680,4 +685,31 @@ footer {
 .faq-plus {
   cursor: pointer;
   transition: transform 0.3s ease;
+}
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-image {
+    flex-shrink: 1;
+    justify-content: center;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    aspect-ratio: 1;
+    margin-right: 0;
+  }
+
+  .faq-card {
+    width: 100%;
+  }
 }
