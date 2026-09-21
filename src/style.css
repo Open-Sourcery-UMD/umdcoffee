@@ -122,9 +122,10 @@ nav a {
 .navbar {
   display: flex; 
   flex-wrap: wrap;
-  position: fixed; 
-  top: 0; 
-  width: calc(100% - 72px); 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100% - 72px);
   justify-content: space-between; 
   align-items: center; 
   background-color: oklch(93.455% 0.0272 72.74); 
@@ -258,7 +259,7 @@ nav a {
     padding-top: 8px;
     border-bottom: 2px solid #66483E40;
     width: 100vw;
-    margin: 0 -30px;
+    margin: 0 -36px;
   }
 
   #hamburger:checked ~ .hamburger-bars svg rect {
@@ -349,7 +350,9 @@ nav a {
 [ALL] Cards
 ***************************************************************/
 .card {
+  box-sizing: border-box;
   width: 21.25rem;
+  max-width: 100%;
   border: 2px var(--color-secondary) solid;
   border-radius: 12px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -367,6 +370,7 @@ nav a {
 }
 
 .card-image img {
+  width: 100%;
   border-radius: 12px 12px 0 0;
 }
 
@@ -592,6 +596,7 @@ footer {
 
 .faq-tabs {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
   margin: 2rem 0;
