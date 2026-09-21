@@ -122,9 +122,9 @@ nav a {
 .navbar {
   display: flex; 
   flex-wrap: wrap;
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
+  z-index: 10;
   width: calc(100% - 72px);
   justify-content: space-between; 
   align-items: center; 
@@ -509,7 +509,7 @@ nav a {
 .layout {
   display: flex;
   flex-direction: column;
-  margin: 3rem auto 0;
+  margin: 0 auto;
   min-width: 320px;
   max-width: 1280px;
   min-height: calc(100vh - 12rem);
@@ -685,4 +685,31 @@ footer {
 .faq-plus {
   cursor: pointer;
   transition: transform 0.3s ease;
+}
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-image {
+    flex-shrink: 1;
+    justify-content: center;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    aspect-ratio: 1;
+    margin-right: 0;
+  }
+
+  .faq-card {
+    width: 100%;
+  }
 }
