@@ -6,6 +6,7 @@ import js from '@eslint/js';
 import { FlatCompat } from '@eslint/eslintrc';
 import tseslint from 'typescript-eslint';
 import reactHooks from 'eslint-plugin-react-hooks';
+import astro from 'eslint-plugin-astro';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -16,7 +17,7 @@ const compat = new FlatCompat({
 });
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(['dist', '.astro']),
   {
     files: ['**/*.{js,mjs,ts,tsx}'],
 
@@ -43,4 +44,5 @@ export default defineConfig([
       sourceType: 'module',
     },
   },
+  ...astro.configs['flat/recommended'],
 ]);
