@@ -4,3 +4,6 @@ node_modules/
 .vscode/
 dist/
 docs/
+
+# Astro generated types
+.astro/
