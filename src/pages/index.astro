@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Events from '../components/Events.astro';
+import Faq from '../components/Faq.astro';
+import PartnerScroller from '../components/PartnerScroller';
+---
+
+<BaseLayout>
+  <Hero />
+  <Events />
+  <Faq />
+  <PartnerScroller client:visible />
+</BaseLayout>

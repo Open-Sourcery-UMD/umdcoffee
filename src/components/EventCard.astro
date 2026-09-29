@@ -1,0 +1,35 @@
+---
+interface Props {
+  imageSrc: string;
+  imageAlt: string;
+  label: string;
+  date: string;
+  title: string;
+  body: string;
+  ctaLabel: string;
+}
+
+const { imageSrc, imageAlt, label, date, title, body, ctaLabel } = Astro.props;
+---
+
+<div class="card">
+  <div class="card-image">
+    <img src={imageSrc} alt={imageAlt} />
+    <div class="card-image-border"></div>
+  </div>
+  <div class="card-content">
+    <div class="card-content-header">
+      <div class="card-content-header-label">
+        <p>{label}</p>
+      </div>
+      <p class="card-content-header-date">{date}</p>
+    </div>
+    <div class="card-content-body">
+      <h3>{title}</h3>
+      <p>{body}</p>
+    </div>
+    <button class="card-content-hero-action">
+      <p>{ctaLabel}</p>
+    </button>
+  </div>
+</div>
