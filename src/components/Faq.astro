@@ -1,0 +1,40 @@
+---
+import FaqTab from './FaqTab.astro';
+import FaqCard from './FaqCard';
+---
+
+<section class="faq">
+  <h2 class="faq-title">Common Questions Answered</h2>
+  <p class="faq-subtitle">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+
+  <div class="faq-tabs">
+    <FaqTab icon="☕" label="Coffee Secrets" />
+    <FaqTab icon="✉️" label="Contact Us" />
+    <FaqTab icon="👥" label="Joining the Club" />
+    <FaqTab icon="📖" label="Coffee Blogs" />
+    <FaqTab icon="📅" label="Hosting Events" />
+  </div>
+
+  <div class="faq-cards">
+    <FaqCard
+      client:load
+      question="What does your club do?"
+      answer="Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor."
+    />
+    <FaqCard
+      client:load
+      question="How do I get started?"
+      answer="Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor."
+    />
+    <FaqCard
+      client:load
+      question="How often do you meet?"
+      answer="Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor."
+    />
+    <FaqCard
+      client:load
+      question="How do I collab with this club?"
+      answer="Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor."
+    />
+  </div>
+</section>
