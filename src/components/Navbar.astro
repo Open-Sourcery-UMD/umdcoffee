@@ -1,0 +1,44 @@
+---
+const isHome = Astro.url.pathname === '/';
+---
+
+<div class="navbar">
+  <input type="checkbox" id="hamburger" />
+
+  <div class="nav-logo">
+    <a href="/" class="logo-link">
+      <img src="/assets/icons/logo.svg" alt="Coffee Logo" />
+    </a>
+    <p class="logo-text">
+      Coffee<span style="color: oklch(73.229% 0.15551 25.739)"> @ UMD </span>
+    </p>
+  </div>
+
+  <label for="hamburger" class="hamburger-bars">
+    <svg viewBox="0 0 100 80" width="40" height="40">
+      <rect width="100" height="20" rx="10" fill="oklch(23.433% 0.01913 40.841)"></rect>
+      <rect y="30" width="100" height="20" rx="10" fill="oklch(23.433% 0.01913 40.841)"></rect>
+      <rect y="60" width="100" height="20" rx="10" fill="oklch(23.433% 0.01913 40.841)"></rect>
+    </svg>
+  </label>
+
+  <div class="divider"></div>
+
+  <nav class="nav-links">
+    <div class="nav-page">
+      <a
+        href="/"
+        class={isHome ? 'current-page' : undefined}
+        aria-current={isHome ? 'page' : undefined}
+      >
+        Home
+      </a>
+      <a href="">About</a>
+      <a href="">Resources</a>
+      <a href="">Community</a>
+    </div>
+    <div class="nav-action">
+      <a href="">Join</a>
+    </div>
+  </nav>
+</div>
