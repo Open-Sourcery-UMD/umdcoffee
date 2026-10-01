@@ -1,0 +1,45 @@
+/* Shared pill button (SETUP-4). Variants: primary (mocha on cream), light (cream on brown). */
+.button {
+  display: inline-block;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 0.75rem 1.875rem;
+  font-weight: 700;
+  font-size: var(--text-lg);
+  line-height: 1.2;
+  font-family: inherit;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.button:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.button-primary {
+  background-color: var(--color-mocha);
+  color: var(--color-background);
+}
+
+.button-primary:hover {
+  background-color: var(--color-secondary);
+}
+
+.button-light {
+  background-color: var(--color-background);
+  color: var(--color-secondary);
+}
+
+.button-light:hover {
+  background-color: color-mix(in oklch, var(--color-background) 85%, var(--color-mocha));
+}
