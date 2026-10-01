@@ -12,6 +12,7 @@ Base CSS =======================================================
   --color-secondary-foreground: var(--color-background);
   /* [Var] Text (Minor Third 1.2 Scale Rounded Ratio) [--text-*] */
   --text-xs: 0.833rem;
+  --text-sm: 0.833rem;
   --text-base: 1rem;
   --text-lg: 1.2rem;
   --text-xl: 1.44rem;
@@ -19,6 +20,12 @@ Base CSS =======================================================
   --text-3xl: 2.074rem;
   --text-4xl: 2.488rem;
   --text-5xl: 2.986rem;
+  /* [Var] Shared shapes [--color-mocha, --radius-*, --shadow-*, --border-*] */
+  --color-mocha: #66483e;
+  --radius-card: 12px;
+  --radius-pill: 36px;
+  --shadow-card: 0 4px 4px rgba(0, 0, 0, 0.25);
+  --border-card: 1px solid var(--color-secondary);
 
   /* Make sure the scrolling is smooth */
   scroll-behavior: smooth;
@@ -127,7 +134,7 @@ nav a {
   justify-content: space-between;
   align-items: center;
   z-index: 10;
-  box-shadow: 0 4px 4px 0 #66483e40;
+  box-shadow: 0 4px 4px 0 color-mix(in srgb, var(--color-mocha) 25%, transparent);
   background-color: oklch(93.455% 0.0272 72.74);
   padding-top: 8px;
   padding-right: 36px;
@@ -189,7 +196,7 @@ nav a {
 .nav-action a {
   margin: 0;
   border-radius: 35.14px;
-  background-color: #66483e;
+  background-color: var(--color-mocha);
   padding-top: 13px;
   padding-right: 30px;
   padding-bottom: 13px;
@@ -257,7 +264,7 @@ nav a {
   #hamburger:checked ~ .divider {
     display: flex;
     margin: 0 -36px;
-    border-bottom: 2px solid #66483e40;
+    border-bottom: 2px solid color-mix(in srgb, var(--color-mocha) 25%, transparent);
     padding-top: 8px;
     width: 100vw;
   }
@@ -414,7 +421,7 @@ nav a {
   display: block;
   border: none;
   border-radius: 12px;
-  background: #66483e;
+  background: var(--color-mocha);
   padding: 0.75rem 1.875rem;
   width: 100%;
 }
