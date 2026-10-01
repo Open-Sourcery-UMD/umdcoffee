@@ -3,7 +3,7 @@ Base CSS =======================================================
 ***************************************************************/
 :root {
   /* [Var] Color Palette (Brown-White-Coral) [--color-*] */
-  --color-background: #F5E7D6;
+  --color-background: #f5e7d6;
   --color-foreground: oklch(23.433% 0.01913 40.841);
   --color-accent: oklch(73.229% 0.15551 25.739);
   --color-primary: oklch(52.935% 0.07398 51.292);
@@ -120,26 +120,26 @@ nav a {
 }
 
 .navbar {
-  display: flex; 
-  flex-wrap: wrap;
+  display: flex;
   position: sticky;
   top: 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   z-index: 10;
+  box-shadow: 0 4px 4px 0 #66483e40;
+  background-color: oklch(93.455% 0.0272 72.74);
+  padding-top: 8px;
+  padding-right: 36px;
+  padding-bottom: 8px;
+  padding-left: 36px;
   width: calc(100% - 72px);
-  justify-content: space-between; 
-  align-items: center; 
-  background-color: oklch(93.455% 0.0272 72.74); 
-  padding-left: 36px; 
-  padding-right: 36px; 
-  padding-top: 8px; 
-  padding-bottom: 8px; 
-  box-shadow: 0 4px 4px 0 #66483E40;
 }
 
 .nav-logo {
-  display: flex; 
-  gap: 16px; 
+  display: flex;
   align-items: center;
+  gap: 16px;
 }
 
 .logo-link {
@@ -147,79 +147,79 @@ nav a {
 }
 
 .logo-text {
-  color: oklch(23.433% 0.01913 40.841); 
-  font-family: 'Inter'; 
-  font-weight: bold; 
-  font-size: 19.2px; 
   margin: 0px;
+  color: oklch(23.433% 0.01913 40.841);
+  font-weight: bold;
+  font-size: 19.2px;
+  font-family: 'Inter';
 }
 
 .nav-links {
-  display: flex; 
-  gap: 25px; 
-  align-items: center; 
-  float: left; 
-  font-family: 'Inter'; 
-  font-weight: bold; 
+  display: flex;
+  align-items: center;
+  float: left;
+  gap: 25px;
+  font-weight: bold;
   font-size: 19.2px;
+  font-family: 'Inter';
 }
 
 .nav-page {
-  display: flex; 
+  display: flex;
   gap: 40px;
 }
 
 .nav-page a {
-  color: oklch(23.433% 0.01913 40.841); 
-  text-decoration: none; 
   margin: 0;
+  color: oklch(23.433% 0.01913 40.841);
   text-align: center;
+  text-decoration: none;
 }
 
 .nav-page a:hover {
-  color: oklch(52.935% 0.07398 51.292); 
-  text-decoration: none; 
   margin: 0;
+  color: oklch(52.935% 0.07398 51.292);
+  text-decoration: none;
 }
 
 .nav-page .current-page {
-  color: oklch(73.229% 0.15551 25.739);;
+  color: oklch(73.229% 0.15551 25.739);
 }
 
 .nav-action a {
-  background-color: #66483E; 
-  padding-left: 30px; 
-  padding-right: 30px; 
-  padding-top: 13px; 
-  padding-bottom: 13px; 
-  border-radius: 35.14px; 
-  color: oklch(93.455% 0.0272 72.74); 
-  text-decoration: none; 
   margin: 0;
+  border-radius: 35.14px;
+  background-color: #66483e;
+  padding-top: 13px;
+  padding-right: 30px;
+  padding-bottom: 13px;
+  padding-left: 30px;
+  color: oklch(93.455% 0.0272 72.74);
+  text-decoration: none;
 }
 
 .nav-action a:hover {
-  background-color: oklch(52.935% 0.07398 51.292); 
-  padding-left: 30px; 
-  padding-right: 30px; 
-  padding-top: 13px; 
-  padding-bottom: 13px; 
-  border-radius: 35.14px; 
-  color: oklch(93.455% 0.0272 72.74); 
-  text-decoration: none; 
   margin: 0;
+  border-radius: 35.14px;
+  background-color: oklch(52.935% 0.07398 51.292);
+  padding-top: 13px;
+  padding-right: 30px;
+  padding-bottom: 13px;
+  padding-left: 30px;
+  color: oklch(93.455% 0.0272 72.74);
+  text-decoration: none;
 }
 
 .divider {
   display: none;
 }
 
-#hamburger, .hamburger-bars {
+#hamburger,
+.hamburger-bars {
   display: none;
 }
 
 @media (max-width: 768px) {
-
   .hamburger-bars {
     display: flex;
   }
@@ -235,31 +235,31 @@ nav a {
 
   #hamburger:checked ~ .nav-links {
     display: flex;
-    flex-direction: column;
     flex-basis: 100%;
-    padding-bottom: 30px;
-    padding-top: 20px;
-    margin-left: -36px;
+    flex-direction: column;
     margin-right: -36px;
     margin-bottom: -6px;
-    padding-left: 36px;
-    padding-right: 36px;
+    margin-left: -36px;
     background-color: oklch(90.733% 0.0313 75.159);
+    padding-top: 20px;
+    padding-right: 36px;
+    padding-bottom: 30px;
+    padding-left: 36px;
   }
 
   #hamburger:checked ~ .nav-links > .nav-page {
     display: flex;
     flex-direction: column;
-    padding-bottom: 15px;
     gap: 20px;
+    padding-bottom: 15px;
   }
 
   #hamburger:checked ~ .divider {
     display: flex;
-    padding-top: 8px;
-    border-bottom: 2px solid #66483E40;
-    width: 100vw;
     margin: 0 -36px;
+    border-bottom: 2px solid #66483e40;
+    padding-top: 8px;
+    width: 100vw;
   }
 
   #hamburger:checked ~ .hamburger-bars svg rect {
@@ -267,7 +267,7 @@ nav a {
   }
 
   .navpage a:active {
-    color: oklch(52.935% 0.07398 51.292); 
+    color: oklch(52.935% 0.07398 51.292);
   }
 }
 
@@ -276,8 +276,8 @@ nav a {
 .footer-section {
   display: flex;
   gap: 36px;
-  padding: 36px;
   border-top: 1px solid oklch(23.433% 0.01913 40.841);
+  padding: 36px;
 }
 
 .footer-content {
@@ -288,16 +288,16 @@ nav a {
 }
 
 .footer-content p {
-  font-family: 'Inter'; 
-  font-size: 13.3px;
   margin: 0;
   width: 75%;
+  font-size: 13.3px;
+  font-family: 'Inter';
 }
 
 .footer-logo {
   display: flex;
-  gap: 16px;
   align-items: center;
+  gap: 16px;
 }
 
 .icon-list {
@@ -312,15 +312,15 @@ nav a {
 
 .links {
   display: flex;
-  flex-direction: column;
   flex: 1;
+  flex-direction: column;
   gap: 16px;
 }
 
 .links h1 {
-  font-size: 13.3px;
   margin: 0;
   color: oklch(52.935% 0.07398 51.292);
+  font-size: 13.3px;
 }
 
 .links p {
@@ -329,7 +329,6 @@ nav a {
 }
 
 @media (max-width: 768px) {
-
   .footer-section {
     flex-wrap: wrap;
   }
@@ -351,11 +350,11 @@ nav a {
 ***************************************************************/
 .card {
   box-sizing: border-box;
-  width: 21.25rem;
-  max-width: 100%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border: 2px var(--color-secondary) solid;
   border-radius: 12px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 21.25rem;
+  max-width: 100%;
 }
 
 .card-content {
@@ -370,17 +369,17 @@ nav a {
 }
 
 .card-image img {
-  width: 100%;
   border-radius: 12px 12px 0 0;
+  width: 100%;
 }
 
 .card-image-border {
   position: absolute;
+  right: 0;
   bottom: 0;
   left: 0;
-  right: 0;
-  height: 1.25rem;
   background: linear-gradient(to top, var(--color-background), rgba(0, 0, 0, 0));
+  height: 1.25rem;
 }
 
 .card-content-header {
@@ -390,14 +389,15 @@ nav a {
   font-size: var(--text-sm);
 }
 
-.card-content-header p, .card-content-body p {
+.card-content-header p,
+.card-content-body p {
   margin: 0;
 }
 
 .card-content-header-label {
-  padding: 0.3rem 1.625rem;
-  background: var(--color-accent);
   border-radius: 12px;
+  background: var(--color-accent);
+  padding: 0.3rem 1.625rem;
 }
 
 .card-content-header-label p {
@@ -412,11 +412,11 @@ nav a {
 
 .card-content-hero-action {
   display: block;
-  width: 100%;
   border: none;
-  background: #66483E;
   border-radius: 12px;
+  background: #66483e;
   padding: 0.75rem 1.875rem;
+  width: 100%;
 }
 
 .card-content-hero-action p {
@@ -432,8 +432,8 @@ nav a {
 }
 
 .card-content-body h3 {
-  font-size: var(--text-xl);
   color: var(--color-accent);
+  font-size: var(--text-xl);
 }
 
 .card-content-body p {
@@ -455,24 +455,24 @@ nav a {
   gap: 0.25rem;
 }
 
-.events-sec-text p, .events-sec-text h2 {
+.events-sec-text p,
+.events-sec-text h2 {
   margin: 0;
 }
 
 .events-sec-cards {
   display: flex;
-  gap: 4.375rem;
   flex-wrap: wrap;
+  gap: 4.375rem;
 }
-
 
 /***************************************************************
 [SECTION] Partner Scrolling
 ***************************************************************/
 .partner-scrolling {
+  position: relative;
   width: 100%;
   overflow-x: hidden;
-  position: relative;
 }
 
 .partner-scrolling-partners {
@@ -489,18 +489,30 @@ nav a {
   position: absolute;
   top: 0;
   left: 0;
+  background: linear-gradient(
+    90deg,
+    var(--color-background) 0%,
+    rgba(245, 231, 214, 0.9) 25%,
+    rgba(245, 231, 214, 0.75) 50%,
+    rgba(245, 231, 214, 0) 100%
+  );
   width: 21vw;
   height: 100%;
-  background: linear-gradient(90deg, var(--color-background) 0%, rgba(245, 231, 214, 0.9) 25%, rgba(245, 231, 214, 0.75) 50%, rgba(245, 231, 214, 0) 100%);
 }
 
 .partner-scrolling-fade-right {
   position: absolute;
   top: 0;
   right: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(245, 231, 214, 0) 0%,
+    rgba(245, 231, 214, 0.75) 50%,
+    rgba(245, 231, 214, 0.9) 75%,
+    var(--color-background) 100%
+  );
   width: 21vw;
   height: 100%;
-  background: linear-gradient(90deg, rgba(245, 231, 214, 0) 0%, rgba(245, 231, 214, 0.75) 50%, rgba(245, 231, 214, 0.9) 75%, var(--color-background) 100%);
 }
 
 /***************************************************************
@@ -536,7 +548,6 @@ footer {
 [>=768px] Layout: Tablet Design ================================
 ***************************************************************/
 @media all and (width >=768px) {
-
   /* breakpoint for if shift of layout is needed */
   body {
     /* Example: change background color for tablet (delete later) */
@@ -558,8 +569,8 @@ footer {
 }
 
 .subtitle {
-  font-weight: bold;
   color: var(--color-secondary);
+  font-weight: bold;
 }
 
 .highlight {
@@ -572,26 +583,26 @@ footer {
 
 .cta-button {
   display: inline-block;
-  background-color: var(--color-secondary);
-  color: var(--color-secondary-foreground);
-  padding: 12px 24px;
-  border-radius: 25px;
-  text-decoration: none;
   margin-top: 1rem;
+  border-radius: 25px;
+  background-color: var(--color-secondary);
+  padding: 12px 24px;
+  color: var(--color-secondary-foreground);
+  text-decoration: none;
 }
 
 .hero-image {
   display: flex;
-  justify-content: flex-end;
   flex-shrink: 0;
+  justify-content: flex-end;
 }
 
 .hero-image img {
+  margin-right: -50px;
+  border-radius: 50%;
   width: 640px;
   height: 640px;
   object-fit: cover;
-  border-radius: 50%;
-  margin-right: -50px;
 }
 
 .faq-tabs {
@@ -606,10 +617,10 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem 1.5rem;
+  cursor: pointer;
   border: 2px solid var(--color-secondary);
   border-radius: 10px;
-  cursor: pointer;
+  padding: 1rem 1.5rem;
 }
 
 .faq-tab.active {
@@ -618,8 +629,8 @@ footer {
 }
 
 .tab-icon {
-  font-size: var(--text-2xl);
   margin-bottom: 0.5rem;
+  font-size: var(--text-2xl);
 }
 
 /* FAQ Section */
@@ -636,7 +647,6 @@ footer {
   text-align: center;
 }
 
-
 .faq-cards {
   display: flex;
   flex-wrap: wrap;
@@ -645,22 +655,22 @@ footer {
 }
 
 .faq-card {
-  width: calc(50% - 1.5rem);
+  box-sizing: border-box;
   border: 2px solid var(--color-secondary);
   border-radius: 10px;
   padding: 1.5rem;
-  box-sizing: border-box;
+  width: calc(50% - 1.5rem);
 }
 
 .faq-plus {
   color: var(--color-secondary);
-  font-size: var(--text-2xl);
   font-weight: bold;
+  font-size: var(--text-2xl);
 }
 
 .faq-question {
-  font-size: var(--text-lg);
   margin: 0.5rem 0;
+  font-size: var(--text-lg);
 }
 
 .faq-tab:hover {
@@ -669,9 +679,9 @@ footer {
 }
 
 .faq-answer {
+  transition: max-height 0.3s ease;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
 }
 
 .faq-card.open .faq-answer {
@@ -683,8 +693,8 @@ footer {
 }
 
 .faq-plus {
-  cursor: pointer;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .hero {
@@ -702,11 +712,11 @@ footer {
   }
 
   .hero-image img {
+    margin-right: 0;
+    aspect-ratio: 1;
     width: 100%;
     max-width: 640px;
     height: auto;
-    aspect-ratio: 1;
-    margin-right: 0;
   }
 
   .faq-card {
