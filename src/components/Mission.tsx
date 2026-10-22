@@ -10,7 +10,7 @@ export default function Mission() {
         We bring students together over <span className="highlight">free coffee</span> and help them
         bring specialty coffee into their own lives.
       </p>
-      <ul className="pill-list">
+      <ul>
         <li>Weekly coffee socials</li>
         <li>Collabs with clubs across campus</li>
         <li>Specialty coffee partnerships</li>
