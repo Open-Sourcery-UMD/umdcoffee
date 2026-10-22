@@ -9,15 +9,15 @@ interface PunchCardProps {
 
 export default function PunchCard({ title, body, button }: PunchCardProps) {
 	return (
-		<div className="punch-card-box">
-			<div className="punch-card-grid">
-				<div className="punch-card-info">
-					<h1>{title}</h1>
-					<p>{body}</p>
-					<Button variant="primary">{button}</Button>
+		<div className="punch-card-container">
+			<div className="punch-card-flex">
+				<div>
+					<div><h1>{title}</h1></div>
+					<div><p>{body}</p></div>
+					<div><Button variant="primary">{button}</Button></div>
 				</div>
-				<div className="punch-card">
-					<p>test</p>
+				<div>
+					<img src="punch-card.svg"></img>
 				</div>
 			</div>
 		</div>
