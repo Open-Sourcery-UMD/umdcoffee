@@ -1,1 +1,18 @@
 /* JoinCta styles (ABOUT-5). Only JoinCta.tsx and its single-use children add rules here. */
+.punch-card-box {
+  display: flex;
+  border: 2px var(--color-foreground) dashed;
+  border-radius: 10px;
+  padding: 3rem;
+}
+
+.punch-card-grid {
+	display: grid;
+	grid-template-columns: auto 1fr;
+}
+
+.punch-card-info {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto;
+}
