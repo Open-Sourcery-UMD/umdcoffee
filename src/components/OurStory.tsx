@@ -1,7 +1,16 @@
 import './OurStory.css';
 
-// TODO(STORY-1): build the Our Story teaser (heading, photo collage, More about us button).
-// Root element: <section className="our-story">. Renders nothing until built so pages don't shift.
 export default function OurStory() {
-  return null;
+  return (
+    <section className="our-story" aria-labelledby="our-story-heading">
+      <div className="our-story-heading">
+        <h2 id="our-story-heading">Our Story</h2>
+        <p className="our-story-intro">
+          Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
+          pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.
+        </p>
+        <p className="our-story-tagline">Dreaming of drinking more coffee...</p>
+      </div>
+    </section>
+  );
 }
