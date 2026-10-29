@@ -4,23 +4,23 @@ import './Mission.css';
 
 interface Props {
   title: String;
+  subtitle: String;
+  content: String;
 }
 
 function MenuItem(props: Props) {
   return (
     <div>
       <div style={{ display: 'flex', alignItems: 'center' }}>
-        <h2 className="primary-color" style={{ marginTop: 0 }}>
+        <h2 className="primary-color" style={{ marginTop: 0, fontSize: 27.65 }}>
           {props.title}
         </h2>
         <div className="dotted-line"></div>
-        <h3 className="subheading-color">Test</h3>
+        <h3 className="subheading-color" style={{ fontSize: 19.2 }}>
+          {props.subtitle}
+        </h3>
       </div>
-      <p className="primary-color">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid id, dolores deserunt porro
-        nesciunt animi magnam eaque sunt accusantium ea fuga hic nam enim perferendis, obcaecati
-        iusto cupiditate neque earum!
-      </p>
+      <p className="primary-color">{props.content}</p>
     </div>
   );
 }
@@ -33,10 +33,26 @@ export default function Mission() {
           What We Value
         </h1>
         <div className="item-frame">
-          <MenuItem title="Everyone's Welcome" />
-          <MenuItem title="Craft, Not Product" />
-          <MenuItem title="Ethically Sourced" />
-          <MenuItem title="Coffee & Company" />
+          <MenuItem
+            title="Everyone's Welcome"
+            subtitle="All levels"
+            content="Coffee lovers, coffee skeptics, and people who've never heard of specialty coffee. There's a cup and a seat for you."
+          />
+          <MenuItem
+            title="Craft, Not Product"
+            subtitle="Small roasters"
+            content="We treat coffee as a craft and lift up smaller, unique businesses, from roasters to milk makers to gear."
+          />
+          <MenuItem
+            title="Ethically Sourced"
+            subtitle="Direct trade"
+            content="We only partner with direct-trade or Fairtrade roasters and companies with ethical business practices."
+          />
+          <MenuItem
+            title="Coffee & Company"
+            subtitle="Equal parts"
+            content="Specialty coffee and socializing get equal billing. Come for a cup, stay for the people."
+          />
         </div>
       </section>
     </>
