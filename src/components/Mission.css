@@ -1,1 +1,30 @@
 /* Mission styles (ABOUT-2). Only Mission.tsx and its single-use children add rules here. */
+.values-section {
+    background-color: var(--color-secondary);
+    padding: 56px;
+    padding-bottom: 64px;
+    gap: 40px;
+    border-radius: 12px;
+}
+
+.primary-color {
+    color: var(--color-background);
+}
+
+.subheading-color {
+    color: var(--color-accent);
+}
+
+.item-frame {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 48px
+}
+
+.dotted-line {
+    height: 2px;
+    flex-grow: 1;
+    border-bottom: 2px dashed;
+    border-color: var(--color-background)
+}
