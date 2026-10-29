@@ -7,8 +7,6 @@ interface ReusableCardProps {
   title: string;
   description: string;
   buttonLabel: string;
-  buttonTo?: string;
-  buttonHref?: string;
   onButtonClick?: () => void;
 }
 
