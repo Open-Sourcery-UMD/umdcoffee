@@ -1,22 +1,44 @@
 // TODO(ABOUT-2): build the mission statement + "what we do" pills.
 // Root element: <section className="mission">. Renders nothing until built so pages don't shift.
-import Button from './Button';
+import './Mission.css';
+
+interface Props {
+  title: String;
+}
+
+function MenuItem(props: Props) {
+  return (
+    <div>
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        <h2 className="primary-color" style={{ marginTop: 0 }}>
+          {props.title}
+        </h2>
+        <div className="dotted-line"></div>
+        <h3 className="subheading-color">Test</h3>
+      </div>
+      <p className="primary-color">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid id, dolores deserunt porro
+        nesciunt animi magnam eaque sunt accusantium ea fuga hic nam enim perferendis, obcaecati
+        iusto cupiditate neque earum!
+      </p>
+    </div>
+  );
+}
 
 export default function Mission() {
   return (
     <>
-      <h2 style={{ textAlign: 'center', marginTop: 50 }}>Our mission</h2>
-      <p style={{ textAlign: 'center' }}>
-        We bring students together over <span className="highlight">free coffee</span> and help them
-        bring specialty coffee into their own lives.
-      </p>
-      <ul>
-        <li>Weekly coffee socials</li>
-        <li>Collabs with clubs across campus</li>
-        <li>Specialty coffee partnerships</li>
-        <li>Free barista classes</li>
-        <li>Free barista classes</li>
-      </ul>
+      <section className="values-section">
+        <h1 style={{ textAlign: 'center' }} className="primary-color">
+          What We Value
+        </h1>
+        <div className="item-frame">
+          <MenuItem title="Everyone's Welcome" />
+          <MenuItem title="Craft, Not Product" />
+          <MenuItem title="Ethically Sourced" />
+          <MenuItem title="Coffee & Company" />
+        </div>
+      </section>
     </>
   );
 }
