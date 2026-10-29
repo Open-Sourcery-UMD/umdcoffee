@@ -1,1 +1,104 @@
-/* Values styles (ABOUT-3). Only Values.tsx and its single-use children add rules here. */
+.values {
+  margin: 2rem;
+  box-shadow: var(--shadow-card);
+  border-radius: var(--radius-card);
+  background-color: var(--color-secondary);
+  padding: clamp(1.5rem, 4.5vw, 3.5rem);
+  color: var(--color-secondary-foreground);
+  font-family: 'Inter', sans-serif;
+}
+
+.values h2 {
+  margin: 0 0 clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2rem, 4vw, var(--text-5xl));
+  text-align: center;
+}
+
+.values-menu {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.5rem 3rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.values-menu-item {
+  container-type: inline-size;
+  min-width: 0;
+}
+
+.values-menu-item-header {
+  display: grid;
+  grid-template-columns: auto minmax(0, auto) minmax(1rem, 1fr) auto;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.values-menu-item-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.values-menu-item-name {
+  font-size: var(--text-2xl);
+  overflow-wrap: anywhere;
+}
+
+.values-menu-item-leader {
+  opacity: 0.4;
+  background-image: radial-gradient(circle, currentColor 1px, transparent 1.5px);
+  background-size: 8px 3px;
+  height: 3px;
+}
+
+.values-menu-item-tag {
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  white-space: nowrap;
+}
+
+.values-menu-item-description {
+  margin: 0.75rem 0 0;
+  color: color-mix(in srgb, var(--color-secondary-foreground) 80%, var(--color-secondary));
+  line-height: 1.4;
+}
+
+@container (max-width: 26rem) {
+  .values-menu-item-header {
+    grid-template-columns: auto minmax(1rem, 1fr) minmax(0, max-content);
+    gap: 0.5rem 0.75rem;
+  }
+
+  .values-menu-item-name {
+    grid-column: 2 / -1;
+    font-size: var(--text-xl);
+  }
+
+  .values-menu-item-leader {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  .values-menu-item-tag {
+    grid-row: 2;
+    grid-column: 3;
+    font-size: var(--text-base);
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (min-width: 1024px) {
+  .values-menu {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .values {
+    margin: 1.5rem 1rem;
+  }
+}
