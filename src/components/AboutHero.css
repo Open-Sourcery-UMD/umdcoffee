@@ -1,1 +1,53 @@
 /* AboutHero styles (ABOUT-1). Only AboutHero.tsx and its single-use children add rules here. */
+.about-hero {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 3rem 0;
+  border-radius: var(--radius-card);
+  isolation: isolate;
+  padding: 3rem;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.about-hero-image {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-hero::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(65, 35, 18, 0.8), rgba(65, 35, 18, 0.15));
+  content: '';
+}
+
+.about-hero > :not(.about-hero-image) {
+  position: relative;
+  z-index: 2;
+}
+
+.about-hero-title,
+.about-hero-description {
+  margin: 0;
+  color: var(--color-background);
+}
+
+.about-hero-description {
+  max-width: 40ch;
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    margin: 3rem 1rem;
+  }
+}

@@ -32,6 +32,12 @@ export default function Navbar() {
           <NavLink to="/about" className={({ isActive }) => (isActive ? 'current-page' : '')}>
             About
           </NavLink>
+          <NavLink
+            to="/for-students"
+            className={({ isActive }) => (isActive ? 'current-page' : '')}
+          >
+            For Students
+          </NavLink>
           <a href="">Resources</a>
           <a href="">Community</a>
         </div>
