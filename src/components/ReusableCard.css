@@ -1,0 +1,31 @@
+.reusable-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  border-radius: var(--radius-card);
+  background: var(--color-background);
+  padding: 1.5rem;
+  width: 50%;
+}
+
+.reusable-card-icon {
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-mocha);
+  width: 3.5rem;
+  height: 3.5rem;
+  transform: translate(0px, -40px);
+}
+
+.reusable-card-content h3 {
+  padding-bottom: 16px;
+  color: var(--color-foreground);
+  font-size: var(--text-xl);
+}
+
+.reusable-card-content p {
+  color: var(--color-mocha);
+  font-size: var(--text-base);
+}
