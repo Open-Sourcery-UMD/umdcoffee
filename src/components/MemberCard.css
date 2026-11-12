@@ -1,0 +1,85 @@
+/* Card Container */
+.card.member-card {
+  width: 340px;
+  max-width: 100%;
+  border-radius: 16px;
+  border: 1px solid #5a3c28;
+  background-color: #4e2e18;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Wrapper & Cropping */
+.card.member-card .card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card.member-card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Card Body Content */
+.card.member-card .card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+/* Circular Icon Badge */
+.card-icon-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #e26d5c;
+  width: 42px;
+  height: 42px;
+  color: #ffffff;
+}
+
+.card.member-card .card-content-body h3 {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.card.member-card .card-content-body p {
+  color: #f5e7d6;
+  font-weight: 400;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Button Styling */
+.card.member-card .card-content-hero-action {
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  border-radius: 36px;
+  border: none;
+  background-color: #f5e7d6;
+  color: #3b2319;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.card.member-card .card-content-hero-action:hover {
+  background-color: #ffffff;
+}
+
+.card.member-card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 85%;
+  display: block;
+}
