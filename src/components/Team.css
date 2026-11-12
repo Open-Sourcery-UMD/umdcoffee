@@ -1,1 +1,60 @@
 /* Team styles (ABOUT-4). Only Team.tsx and its single-use children add rules here. */
+.card-container {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    gap: 28px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.officer-card {
+    width: 208px;
+    border-radius: 12px;
+    border: 1px;
+    border-style: solid;
+    border-bottom-color: var(--color-secondary);
+    box-shadow: 0px 4px 4px #00000040;
+}
+
+.hello-band {
+    background-color: var(--color-accent);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+}
+
+.hello-text {
+    color: var(--color-background);
+    font-weight: 700;
+    font-size: 13.33px;
+    line-height: 100%;
+    letter-spacing: 20%;
+    margin-bottom: 0px;
+}
+
+.officer-card-content {
+    text-align: center;
+    padding-top: 20px;
+    padding-right: 16px;
+    padding-bottom: 20px;
+    padding-left: 16px;
+    gap: 10px;
+}
+
+.role-text {
+    font-weight: 700;
+    color: var(--color-accent);
+    font-size: 16;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.usual-order {
+    border-top: 1px;
+    border-top-style: dashed;
+    border-color: #4E2E1866;
+    padding-top: 12px;
+    gap: 2px;
+}
