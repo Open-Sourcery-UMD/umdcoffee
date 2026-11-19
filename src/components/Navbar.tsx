@@ -38,7 +38,9 @@ export default function Navbar() {
           >
             For Students
           </NavLink>
-          <a href="">Resources</a>
+          <NavLink to="/resources" className={({ isActive }) => (isActive ? 'current-page' : '')}>
+            Resources
+          </NavLink>
           <a href="">Community</a>
         </div>
         <div className="nav-action">
